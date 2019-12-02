@@ -11,3 +11,4 @@ git log-check tung buoc thay doi
 git revert- quay lai 
 git branch- tao mot nhanh khac cho github
 git merge-gom cac nhanh lai
+git checkout- thay doi nhanh qua lai
