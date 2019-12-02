@@ -1,0 +1,13 @@
+git init-tao repository
+git status-check file
+git add "name"-them file
+git add . - them het file
+git commit -m "name"- commit file
+git commit -a -m "name"- combo them va commit file
+git push- up file len github
+git pull- lay file ve laptop
+git clone- tao file tuong tu
+git log-check tung buoc thay doi
+git revert- quay lai 
+git branch- tao mot nhanh khac cho github
+git merge-gom cac nhanh lai
