@@ -9,7 +9,12 @@ git pull- lay file ve laptop
 git clone- tao file tuong tu
 git log-check tung buoc thay doi
 git revert- quay lai 
+git branch - kiem tra co bao nhieu branch 
 git branch (name)- tao mot nhanh khac cho github
 git branch -d (name)-xoa mot nhanh tren github
 git merge-gom cac nhanh lai
 git checkout- thay doi nhanh qua lai
+
+git remote add (name branch) (link url)- up new branch len github
+git push(name branch)
+git push --set-upstream (name of new branch) (branch)
