@@ -16,6 +16,8 @@ git branch -b (new branch) - tao va chuyen luon
 git merge-gom cac nhanh lai
 git checkout- thay doi nhanh qua lai
 
+git remote add origin (link url)
+git remote
 git remote add (new branch) (link url)- up new branch len github
 git push(name new branch)
 git push --set-upstream (name of file) (branch)
