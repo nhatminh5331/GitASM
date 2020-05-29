@@ -1,0 +1,25 @@
+git init-tao repository trong folder can tao
+git status-check file
+git add "name"-them file
+git add . - them het file
+git commit -m "name"- commit file
+git commit -a -m "name"-  them va commit file
+git push- up file len github
+git pull- lay file ve laptop
+git clone- tao file git tuong tu
+git log-check tung buoc thay doi
+git revert- quay lai 
+git branch - kiem tra branch local
+git branch (new branch)-tao mot nhanh khac cho github
+git branch -d (name branch)-xoa mot nhanh tren github
+git branch -b (new branch) - tao va chuyen luon
+git merge-gom cac nhanh lai
+git checkout- thay doi nhanh qua lai
+
+
+git remote add (new remote) (link url)- up new remote len github
+git push (name new remote)
+git push --set-upstream (name of file) (branch)
+
+git remote -v - kiem tra cac kho chua tu xa
+git branch -a - kiem tra cac nhanh'
