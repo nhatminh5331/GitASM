@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+Live Demo
 <html>
-<body>
+   
+   <head>
+      <title>Hello World</title>
+   </head>
+   
+   <body>
+      <?php echo "Hello, World!";?>
+   </body>
 
-<?php
-echo "My first PHP script!";
-?>
-
-</body>
 </html>
