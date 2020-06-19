@@ -6,7 +6,7 @@
 
 <?php
 ini_set('display_errors', 1);
-echo "Hello Cloud computing class 0818!";
+echo "Hello Cloud computing class 0702!";
 ?>
 
 <?php
@@ -44,7 +44,7 @@ echo '<p>Thong tin cua khach hang:</p>';
       <tr>
         <th>Ma khach hang</th>
         <th>Ten khach hang</th>
-        <th>sdt khach hang</th>
+        <th>Sdt khach hang</th>
         <th>Dia chi khach hang</th>
       </tr>
     </thead>
