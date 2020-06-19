@@ -6,7 +6,7 @@
 
 <?php
 ini_set('display_errors', 1);
-echo "Hello Cloud computing class 0702!";
+echo "Hello Cloud computing class 0818!";
 ?>
 
 <?php
@@ -35,7 +35,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $stmt->execute();
 $resultSet = $stmt->fetchAll();
-echo '<p>Thong tin cua khach hang:</p>';
+echo '<p>Thong tin khach hang:</p>';
 
 ?>
 <div id="container">
@@ -44,7 +44,7 @@ echo '<p>Thong tin cua khach hang:</p>';
       <tr>
         <th>Ma khach hang</th>
         <th>Ten khach hang</th>
-        <th>Sdt khach hang</th>
+        <th>SDT khach hang</th>
         <th>Dia chi khach hang</th>
       </tr>
     </thead>
