@@ -155,7 +155,7 @@
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li>
-                                <a href="index.htm">Home</a>
+                                <a href="index.php">Home</a>
                             </li>
                             <li>
                                 <a href="shop.htm">Shop page</a>
@@ -324,7 +324,7 @@
                                         <div class="col-1">
                                             <div class="woocommerce-billing-fields">
                                                 <h3>Billing Details</h3>
-						
+                                                <form name="checkout" action="checkout.php" method="POST" >
                                                 <p id="billing_first_name_field" class="form-row form-row-first validate-required">
                                                     <label class="" for="billing_first_name">
                                                         Customer ID <abbr title="required" class="required">*</abbr>
@@ -354,7 +354,7 @@
                                                     </label>
                                                     <input type="text" value="" placeholder="address" id="billing_phone" name="sdtkhachhang" class="input-text ">
                                                 </p>
-                                            
+                                            </form>
                                         </div>
                                                     </select>
                                                     </p>
