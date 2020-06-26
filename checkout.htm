@@ -329,13 +329,13 @@
                                                     <label class="" for="billing_first_name">
                                                         Customer ID <abbr title="required" class="required">*</abbr>
                                                     </label>
-                                                    <input type="text" value="" placeholder="customerid" id="billing_first_name" name="makhachhang" class="input-text ">
+                                                    <input type="text" value="" placeholder="Customer ID" id="billing_first_name" name="makhachhang" class="input-text ">
                                                 </p>
                                                 <p id="billing_last_name_field" class="form-row form-row-last validate-required">
                                                     <label class="" for="billing_last_name">
                                                         Customer Name <abbr title="required" class="required">*</abbr>
                                                     </label>
-                                                    <input type="text" value="" placeholder="customername" id="billing_last_name" name="tenkhachhang" class="input-text ">
+                                                    <input type="text" value="" placeholder="Customer Name" id="billing_last_name" name="tenkhachhang" class="input-text ">
                                                 </p>
                                                 <div class="clear"></div>
                                                 
@@ -343,7 +343,7 @@
                                                     <label class="" for="billing_address_1">
                                                         Phone <abbr title="required" class="required">*</abbr>
                                                     </label>
-                                                    <input type="text" value="" placeholder="phone" id="billing_address_1" name="diachi" class="input-text ">
+                                                    <input type="text" value="" placeholder="Phone" id="billing_address_1" name="sdtkhachhang" class="input-text ">
                                                 </p>
                             
                                                 <div class="clear"></div>
@@ -352,9 +352,8 @@
                                                     <label class="" for="billing_phone">
                                                         Address <abbr title="required" class="required">*</abbr>
                                                     </label>
-                                                    <input type="text" value="" placeholder="address" id="billing_phone" name="sdtkhachhang" class="input-text ">
+                                                    <input type="text" value="" placeholder="Address" id="billing_phone" name="diachi" class="input-text ">
                                                 </p>
-                                            </form>
                                         </div>
                                                     </select>
                                                     </p>
@@ -405,26 +404,10 @@
                                                 </tr>
                                             </tfoot>
                                         </table>
-                                        <div id="payment">
-                                            <ul class="payment_methods methods">
-                                                <li class="payment_method_paypal">
-                                                    <input type="radio" data-order_button_text="Proceed to PayPal" value="paypal" name="payment_method" class="input-radio" id="payment_method_paypal">
-                                                    <label for="payment_method_paypal">
-                                                        PayPal <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="78fa30259c1e96721037d375-|49"></script>
-                                                        <img alt="PayPal Acceptance Mark" src="https://www.paypalobjects.com/webstatic/mktg/Logo/AM_mc_vs_ms_ae_UK.png" pagespeed_url_hash="1573640239" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                                                        <a title="What is PayPal?" onclick="if (!window.__cfRLUnblockHandlers) return false; javascript:window.open('https://www.paypal.com/gb/webapps/mpp/paypal-popup','WIPaypal','toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=1060, height=700'); return false;" class="about_paypal" href="https://www.paypal.com/gb/webapps/mpp/paypal-popup" data-cf-modified-78fa30259c1e96721037d375-="">What is PayPal?</a>
-                                                    </label>
-                                                    <div style="display:none;" class="payment_box payment_method_paypal">
-                                                        <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <div class="form-row place-order">
-                                                <input type="submit" data-value="Place order" value="Place order" id="place_order" name="woocommerce_checkout_place_order" class="button alt">
+                                            <div class="checkout">
+                                                <input type="submit" value="Place order">
                                             </div>
-        
-                                            <div class="clear"></div>
-                                        </div>
+                                        </form>
                                     </div>
                                 </form>
                             </div>
