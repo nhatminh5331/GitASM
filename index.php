@@ -47,15 +47,6 @@
                 </div>
                 <ul>
                 <div class="register">
-                <form name="checkout" action="checkout.php" method="POST" >
-                        <input placeholder="customerid" name="makhachhang" type="text" required="">
-                        <input placeholder="customername" name="tenkhachhang" type="text" required="">	
-                        <input placeholder="phone" name="sdtkhachhang" type="text" required="">	
-                        <input placeholder="address" name="diachi" type="text" required="">
-                        <div class="sign-up">
-							<input type="submit" value="Create Account"/>
-						</div>
-                </form>
                  </div>
                 </ul>
                 <div class="col-md-4">
