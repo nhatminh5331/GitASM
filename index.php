@@ -46,12 +46,7 @@
                     </div>
                 </div>
                 <ul>
-                    <form name="InsertData" action="checkout.php" method="POST" >
-                        <input placeholder="customerid" name="makhachhang" type="text" required="">
-                        <input placeholder="customername" name="tenkhachhang" type="text" required="">	
-                        <input placeholder="phone" name="sdtkhachhang" type="number" required="">	
-                        <input placeholder="address" name="diachi" type="text" required="">
-                </form>
+
                 </ul>
                 <div class="col-md-4">
                     <div class="header-right">
@@ -126,7 +121,12 @@
             </div>
         </div>
     </div> <!-- End mainmenu area -->
-    
+    <form name="InsertData" action="checkout.php" method="POST" >
+                        <input placeholder="customerid" name="makhachhang" type="text" required="">
+                        <input placeholder="customername" name="tenkhachhang" type="text" required="">	
+                        <input placeholder="phone" name="sdtkhachhang" type="number" required="">	
+                        <input placeholder="address" name="diachi" type="text" required="">
+                </form>
     <div class="slider-area">
         	<!-- Slider -->
 			<div class="block-slider block-slider4">
