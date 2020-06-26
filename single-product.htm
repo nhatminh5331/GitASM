@@ -155,7 +155,7 @@
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li>
-                                <a href="index.php">Home</a>
+                                <a href="index.htm">Home</a>
                             </li>
                             <li>
                                 <a href="shop.htm">Shop page</a>
