@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    height: 100vh;
+    background: url(go.jpeg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aboutme{
+    width: 410px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.card-header{
+    background: #2f3542;
+    padding: 60px 40px;
+    opacity: 1;
+}
+.picture{
+    display: inline-block;
+    padding: 5px;
+    background: linear-gradient(130deg, #74b9ff, #e66767);
+    margin: auto;
+    border-radius: 50%;
+    background-size: 200% 200%;
+    animation: around 2s linear infinite;
+}
+
+@keyframes around{
+    25%{
+        background-position: left bottom;
+    }
+    50%{
+        background-position: right bottom;
+    }
+    75%{
+        background-position: right top;
+    }
+    100%{
+        background-position: left top;
+    }
+}
+.picture img{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.name{
+    color: #ecf0f1;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 5px 0;
+}
+.student{
+    color: #eb4d4b;
+    font-size: 16px;
+}
+.sm{
+    display: flex;
+    justify-content: center;
+    margin: 18px 0;
+}
+.sm a{
+    color: #ecf0f1;
+    width: 50px;
+    font-size: 22px;
+    transition: .3 linear;
+}
+.sm a:hover{
+    color:#eb4d4b;
+}
+.contact{
+    display: inline-block;
+    padding: 9px 65px;
+    color: #eb4d4b;
+    border: 2.5px solid #eb4d4b;
+    border-radius: 10px;
+    margin-top: 15px;
+    transition: .3 linear;
+}
+.contact:hover{
+    color: #fff;
+    background: #eb4d4b;
+}
+.card-footer{
+    background: #fff;
+    padding: 50px 10px;
+}
+.numbers{
+    display: flex;
+    align-items: center;
+}
+.item{
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #eb4d4b;
+}
+.item span{
+    display: block;
+    color: #2f3542;
+    font-size: 25px;
+}
+.border{
+    width: 1px;
+    height: 40px;
+    background: #2f3542;
+}
+
+
