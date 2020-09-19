@@ -14,13 +14,13 @@
 
                 <h2 class="logo">
 
-                    <a href="Page.html">NhatMinh</a>
+                    <a href="Page.php">NhatMinh</a>
 
                 </h2>
 
                 <ul class="menu">
 
-                    <a href="Page.html">Home</a>
+                    <a href="Page.php">Home</a>
                     <a href="About.html">About</a>
                     <a href="Login.html">Manage</a>
                     <a href="Login.html">Login</a>
