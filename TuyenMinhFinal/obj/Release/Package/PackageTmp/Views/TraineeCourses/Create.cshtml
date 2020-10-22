@@ -1,0 +1,34 @@
+﻿﻿@model TuyenMinhFinal.ViewModels.TraineeCourseViewModel
+
+@{ ViewBag.Title = "Create"; }
+
+@using (Html.BeginForm())
+{
+@Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Assign Trainee</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TraineeCourse.TraineeId, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(x => x.TraineeCourse.TraineeId, new SelectList(Model.Trainees, "Id", "UserName"), new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TraineeCourse.TraineeId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TraineeCourse.CourseId, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(x => x.TraineeCourse.CourseId, new SelectList(Model.Courses, "Id", "Name"), new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TraineeCourse.CourseId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Assign" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>}

@@ -1,0 +1,34 @@
+﻿@model TuyenMinhFinal.ViewModels.CourseCategoryViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create a new Course</h2>
+
+@Html.ValidationSummary(false, "", new { @class = "text-danger" })
+
+@using (Html.BeginForm("Create", "Courses", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(p => p.Course.Name)
+        @Html.TextBoxFor(p => p.Course.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(p => p.Course.Name, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.Course.Category.Name)
+        @Html.DropDownListFor(p => p.Course.CategoryId,
+         new SelectList(Model.Categories, "Id", "Name"),
+         "Select Category Name",
+         new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(p => p.Course.Topic.Name)
+        @Html.DropDownListFor(p => p.Course.TopicId,
+         new SelectList(Model.Topics, "Id", "Name"),
+         "Select Topic Name",
+         new { @class = "form-control" })
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+}
+@Html.ActionLink("Back to Index", "Index")

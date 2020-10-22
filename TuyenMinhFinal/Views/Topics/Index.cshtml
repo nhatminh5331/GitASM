@@ -1,0 +1,30 @@
+﻿﻿@model IEnumerable<TuyenMinhFinal.Models.Topic>
+
+@{ ViewBag.Title = "Index"; }
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        
+
+    </tr>
+
+    @foreach (var topic in Model)
+    {
+<tr>
+    <td>@topic.Name</td>
+    <td>@Html.ActionLink("Edit", "Edit", new { id = topic.Id })</td>
+    <td>@Html.ActionLink("Delete", "Delete", new { id = topic.Id })</td>
+    
+</tr>}
+
+</table>
+
+@Html.ActionLink("Back to home", "Index", "Home")

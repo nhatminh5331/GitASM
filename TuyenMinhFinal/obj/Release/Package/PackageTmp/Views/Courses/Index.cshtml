@@ -1,0 +1,40 @@
+﻿﻿@model IEnumerable<TuyenMinhFinal.Models.Course>
+
+@{ ViewBag.Title = "Index"; }
+
+<h2>Course</h2>
+@if (User.IsInRole("TrainingStaff"))
+{
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+}
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Category Name</th>
+        <th>Topics</th>
+        <th>Delete</th>
+        <th>Edit</th>
+        
+
+    </tr>
+
+    @foreach (var course in Model)
+    {
+<tr>
+    <td>@course.Name</td>
+    <td>@course.Category.Name</td>
+    <td>@course.Topic.Name</td>
+
+    <td>
+        @Html.ActionLink("Delete", "Delete", new { id = course.Id })
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = course.Id })
+    </td>
+    
+</tr>}
+
+</table>
+@Html.ActionLink("Back to home", "Index", "Home")

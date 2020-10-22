@@ -1,0 +1,34 @@
+﻿﻿@model TuyenMinhFinal.ViewModels.TrainerTopicViewModel
+
+@{ ViewBag.Title = "Create"; }
+
+@using (Html.BeginForm())
+{
+@Html.AntiForgeryToken()
+
+                <div class="form-horizontal">
+                    <h4>Assign Trainer</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TrainerTopic.TrainerId, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(x => x.TrainerTopic.TrainerId, new SelectList(Model.Trainers, "Id", "UserName"), new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TrainerTopic.TrainerId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TrainerTopic.TopicId, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(x => x.TrainerTopic.TopicId, new SelectList(Model.Topics, "Id", "Name"), new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.TrainerTopic.TopicId, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Assign" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>}

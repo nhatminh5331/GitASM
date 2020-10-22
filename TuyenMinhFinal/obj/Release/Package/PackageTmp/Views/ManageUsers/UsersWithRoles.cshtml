@@ -1,0 +1,55 @@
+﻿﻿@model IEnumerable<TuyenMinhFinal.ViewModels.UsersInRole>
+
+@{ ViewBag.Title = "Users With Roles"; }
+
+@if (Request.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <p>
+        <a onclick="window.location='@Url.Action("Register", "Account")'" class="btn btn-default">Create New</a>
+    </p>
+}
+<h3>Account</h3>
+<div class="panel-body">
+    <table class="table table-striped" id="UsersWithRoles">
+        <thead>
+            <tr>
+                <th>FullName</th>
+                <th>UserName</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Edit</th>
+                <th>Delete</th>
+
+            </tr>
+        </thead>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Username</td>
+                <td>@user.Email</td>
+                <td>@user.Role</td>
+                <td>@Html.ActionLink("Edit", "Edit", new { id = user.UserId })</td>
+                <td>@Html.ActionLink("Delete", "Delete", new { id = user.UserId })</td>
+
+            </tr>
+        }
+    </table>
+</div>
+
+
+
+@section scripts{
+    <script>
+        $(function () {
+            $('#UsersWithRoles').DataTable({
+                "paging": true,
+                "lengthChange": true,
+                "searching": true,
+                "ordering": true,
+                "info": true,
+                "autoWidth": true
+            });
+        });</script>
+}
+@Html.ActionLink("Back", "Index", "Home")

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Welcome To Greenwich Management Application </h1>
+    <h2>
+        @Html.Partial("_LoginPartial")
+    </h2>
+
+</div>
+<div class="row">
+    <div class="col-md-4">
+        @if (Request.IsAuthenticated && User.IsInRole("admin"))
+        {
+            <p><a onclick="window.location='@Url.Action("Index", "Staffs")'" class="btn btn-primary btn-lg">Manage Staff </a></p>
+            <p><a onclick="window.location='@Url.Action("Index", "Trainers")'" class="btn btn-primary btn-lg">Manage Trainer </a></p>
+        }
+        @if (Request.IsAuthenticated && User.IsInRole("staff"))
+        {
+            <p><a onclick="window.location='@Url.Action("Index", "Trainees")'" class="btn btn-primary btn-lg">View All Trainee </a></p>
+            <p><a onclick="window.location='@Url.Action("Index", "Courses")'" class="btn btn-primary btn-lg">View All Course </a></p>
+        }
+        @if (Request.IsAuthenticated && User.IsInRole("trainer"))
+        {
+            <p><a onclick="window.location='@Url.Action("Index", "Trainees")'" class="btn btn-primary btn-lg">View All Trainee </a></p>
+            <p><a onclick="window.location='@Url.Action("Index", "Courses")'" class="btn btn-primary btn-lg">View All Course </a></p>
+        }
+        @if (Request.IsAuthenticated && User.IsInRole("trainee"))
+        {
+            <p><a onclick="window.location='@Url.Action("Index", "Trainees")'" class="btn btn-primary btn-lg">View All Trainee </a></p>
+            <p><a onclick="window.location='@Url.Action("Index", "Courses")'" class="btn btn-primary btn-lg">View All Course </a></p>
+        }
+    </div>
+</div>

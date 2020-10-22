@@ -1,0 +1,33 @@
+﻿
+@model IEnumerable<TuyenMinhFinal.Models.Category>
+
+@{ ViewBag.Title = "Index"; }
+
+<h2>Categories</h2>
+@if (User.IsInRole("TrainingStaff"))
+{
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>}
+
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        @if (User.IsInRole("TrainingStaff"))
+        {
+<th> Delete </th>
+                <th> Edit </th>}
+    </tr>
+    @foreach (var category in Model)
+    {
+<tr>
+    <td>@category.Name</td>
+    <td>@category.Description</td>
+    @if (User.IsInRole("TrainingStaff"))
+    {
+<td>@Html.ActionLink("Delete", "Delete", new { id = category.Id })</td>
+                    <td>@Html.ActionLink("Edit", "Edit", new { id = category.Id })</td>}
+</tr>}
+</table>
+@Html.ActionLink("Back to home", "Index", "Home")

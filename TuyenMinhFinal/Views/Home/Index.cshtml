@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    
+    <h1>Welcome To Greenwich Management Application</h1>
+
+
+</div>
+<body style="background-image: url(Image/pinksky.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;">
+<div class="row">
+    <div class="col-md-4">
+        
+        @if (Request.IsAuthenticated && User.IsInRole("Trainer"))
+        {
+            <table>
+                <thead>
+                    <tr>
+
+                        <th>
+                            @Html.ActionLink("Profile Trainer", "About", "Home")
+                           
+                        </th>
+
+                    </tr>
+                </thead>
+
+            </table>
+        }
+        @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+        {
+           
+
+        }
+        
+           
+        
+    </div>
+
+</div>
+</body>
