@@ -24,20 +24,16 @@ namespace TuyenMinhFinal.Controllers
         // GET: ManageUsers
         public ActionResult UsersWithRoles()
         {
-            var usersWithRoles = (from user in _context.Users
-                                  select new
-                                  {
-                                      UserId = user.Id,
-                                      Name = user.Name,
-                                      Username = user.UserName,
-                                      Emailaddress = user.Email,
-                                      Password = user.PasswordHash,
-                                      RoleNames = (from userRole in user.Roles
-                                                   join role in _context.Roles on userRole.RoleId
-                                                   equals role.Id
-                                                   select role.Name).ToList()
+            var usersWithRoles = (from user in _context.Users 
+                                  select new { UserId = user.Id,
+                                   Name = user.Name,
+                                   Username = user.UserName,
+                                   Emailaddress = user.Email,
+                                   Password = user.PasswordHash,
+                                   RoleNames = (from userRole in user.Roles join role in _context.Roles on userRole.RoleId
+                                                equals role.Id
+                                                select role.Name).ToList()
                                   }).ToList().Select(p => new UsersInRole()
-
                                   {
                                       UserId = p.UserId,
                                       Name = p.Name,
@@ -46,10 +42,8 @@ namespace TuyenMinhFinal.Controllers
                                       Role = string.Join(",", p.RoleNames)
                                   });
 
-
             return View(usersWithRoles);
         }
-
         [HttpGet]
         [Authorize(Roles = "Admin")]
         public ActionResult Edit(string id)
@@ -85,7 +79,7 @@ namespace TuyenMinhFinal.Controllers
                 userInDb.Email = user.Email;
 
 
-                _context.Users.AddOrUpdate(userInDb);
+                _context.Users.Add(userInDb);
                 _context.SaveChanges();
 
                 return RedirectToAction("UsersWithRoles");

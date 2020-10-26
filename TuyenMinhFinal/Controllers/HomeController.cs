@@ -63,7 +63,7 @@ namespace TuyenMinhFinal.Controllers
                 currentUser.Email = user.Email;
 
 
-                _context.Users.AddOrUpdate(currentUser);
+                _context.Users.Add(currentUser);
                 _context.SaveChanges();
 
                 return RedirectToAction("About");
